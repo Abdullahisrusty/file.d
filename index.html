@@ -1,32 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>file.d documentation</title>
-  <link rel="icon" type="image/png" href="/file.d/static/file.d.png" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="A blazing fast tool for building data pipelines: read, process, and output events.">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ultimate Meme Wifeyy Portal</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fff0f6;
+      color: #333;
+      padding: 2em;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #ff4d94;
+    }
+    .section {
+      margin-bottom: 2em;
+      padding: 1em;
+      background: #ffe6f0;
+      border-radius: 1em;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+    .button {
+      padding: 0.5em 1em;
+      background: #ff66b2;
+      color: white;
+      border: none;
+      border-radius: 0.5em;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+    .hidden-message {
+      display: none;
+      margin-top: 1em;
+    }
+    .pat-counter {
+      margin-top: 1em;
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div class="section">
+    <h1>💌 Welcome, Princess His Riri 🍓🩺</h1>
+    <p>WARNING: Extreme love & cringe ahead. Proceed while simping responsibly 😤💗</p>
+  </div>
+
+  <div class="section">
+    <h2>🗺️ Our Meme-Love Timeline</h2>
+    <ul>
+      <li><strong>Day 1:</strong> Me? Talk to her? Bro she too pretty 😭</li>
+      <li><strong>First Call:</strong> Me trying to act cool: *[insert SpongeBob sweating meme]*</li>
+      <li><strong>After Exams:</strong> SHE DID IT!!! ME PRINCESS DOCTOR!!! 😭🎓</li>
+      <li><strong>Now:</strong> Still long distance. Still simping. Still loving.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Inside Joke Generator</h2>
+    <button class="button" onclick="generateJoke()">Generate Inside Joke</button>
+    <p id="jokeDisplay"></p>
+  </div>
+
+  <div class="section">
+    <h2>🧸 Pat Pat Button</h2>
+    <button class="button" onclick="patPat()">Click for Pat Pat 🫂</button>
+    <div class="pat-counter" id="patCounter">You have received 0 pat pats today!</div>
+  </div>
+
+  <div class="section">
+    <h2>🎁 Final Surprise Message</h2>
+    <button class="button" onclick="document.getElementById('hiddenMessage').style.display='block'">Reveal the Surprise 💖</button>
+    <div class="hidden-message" id="hiddenMessage">
+      <p>Me Riri... my world. You’re more than a girlfriend — you’re my everything, my safe place, my forever. No matter the distance, I’m right here, simping for you daily, loving you endlessly. One day, no screens. Just us. Until then… *click for a kiss 😚💋*</p>
+      <audio controls>
+        <source src="your-voice-message.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
   <script>
-    window.$docsify = {
-      name: 'file.d',
-      repo: 'https://github.com/ozontech/file.d',
-      loadSidebar: true,
-      loadNavbar: true,
-      subMaxLevel: 2,
-      maxLevel: 1,
-      coverpage: true,
-      auto2top: true,
-      markdown: {
-        gfm: true
-      }
+    let jokes = [
+      "Banana bananini 🍌",
+      "StrawbRiri 🍓",
+      "Me simpy activated 💘",
+      "Doctor Princess Mode: ON 👑",
+      "Pat Pat Pat Pat Pat 🫂"
+    ];
+    function generateJoke() {
+      const joke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById('jokeDisplay').innerText = joke;
+    }
+
+    let pats = 0;
+    function patPat() {
+      pats++;
+      document.getElementById('patCounter').innerText = `You have received ${pats} pat pats today!`;
     }
   </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/docsify-copy-code"></script>
 </body>
 </html>
